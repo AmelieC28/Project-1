@@ -2,20 +2,20 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 
-public class ResizableArrayBagTest {
+public class LinkedBagTest {
 
 
     @Test
     public void testUnion() {
         // Create bag1 and add items
-        ResizableArrayBag<String> bag1 = new ResizableArrayBag<>();
+        LinkedBag<String> bag1 = new LinkedBag<>();
         bag1.add("pizza");
         bag1.add("cheese");
         bag1.add("bread");
 
 
         // Create bag2 and add items
-        ResizableArrayBag<String> bag2 = new ResizableArrayBag<>();
+        LinkedBag<String> bag2 = new LinkedBag<>();
         bag2.add("pizza");
         bag2.add("tomato");
         bag2.add("bread");
@@ -41,14 +41,14 @@ public class ResizableArrayBagTest {
     @Test
     public void testIntersection() {
         // Create bag1 and add items
-        ResizableArrayBag<String> bag1 = new ResizableArrayBag<>();
+        LinkedBag<String> bag1 = new LinkedBag<>();
         bag1.add("pizza");
         bag1.add("cheese");
         bag1.add("bread");
 
 
         // Create bag2 and add items
-        ResizableArrayBag<String> bag2 = new ResizableArrayBag<>();
+        LinkedBag<String> bag2 = new LinkedBag<>();
         bag2.add("pizza");
         bag2.add("tomato");
         bag2.add("bread");
@@ -72,14 +72,14 @@ public class ResizableArrayBagTest {
     @Test
     public void testDifference() {
         // Create bag1 and add items
-        ResizableArrayBag<String> bag1 = new ResizableArrayBag<>();
+        LinkedBag<String> bag1 = new LinkedBag<>();
         bag1.add("pizza");
         bag1.add("cheese");
         bag1.add("bread");
 
 
         // Create bag2 and add items
-        ResizableArrayBag<String> bag2 = new ResizableArrayBag<>();
+        LinkedBag<String> bag2 = new LinkedBag<>();
         bag2.add("pizza");
         bag2.add("tomato");
         bag2.add("bread");
@@ -109,12 +109,6 @@ public class ResizableArrayBagTest {
         // Check frequency of each item in difference bag
         assertEquals(1, differenceBag2.getFrequencyOf("tomato"));
         assertEquals(1, differenceBag2.getFrequencyOf("pizza"));
-    }
-
-
-    @Override
-    public String toString() {
-        return "ResizableArrayBagTest []";
     }
 }
 
